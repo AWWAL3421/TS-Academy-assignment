@@ -1,0 +1,211 @@
+/* starting varibales for the site */
+:root {
+    --white: #f9faff;
+    --platinum: #e3e4e8;
+    --windsurfing: #32779b;
+    --marina: #5a91c7;
+    --gray: #9a9a9a;
+    --onyx: #3c3d44;
+    --charcoal: #343c47;
+    --corners: #24px 0;
+    --base-font-size: 1rem;
+}
+/* set the box sizing to border-box for layouts */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* Basic page set to our font size and font family */
+ body {
+    font-size: var(--base-font-size);
+    font-family: "inter" sans-serif;
+    background-color: var(--white);
+    color: var(--onyx);
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: var(--platinum);
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    
+}
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main wrapper */
+.wrapper {
+  max-width: 850px;
+  margin: 0;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Contact info */
+.Informationlist {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.Informationlist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 20px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.Informationlist a {
+  text-decoration: none;
+  color: var(--windsurfing);
+}
+
+
+/* Experience section */
+.ExperienceInfo ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Skills */
+.skillsinfo ul {
+  margin-left: 20px;
+}
+
+/* Languages */
+.languageinfo ul {
+  margin-left: 20px;
+}
+
+/* Certifications */
+.certinfo ul {
+  margin-left: 20px;
+}
+
+/* References */
+.refinfo p {
+  margin-bottom: 5px;
+}
+
+/* ✅ Icon/SVG grid styling */
+.icon-grid {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;                /* closer together */
+  justify-content: start;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon-grid svg {
+  width: 22px;              /* not too big */
+  height: 22px;
+  fill: var(--windsurfing);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  /* SVG grid layout */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 2rem;               /* closer spacing */
+  max-width: 22px;
+  margin-top: 15px;
+}
+
+/* Icon styling */
+.icon-grid svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--windsurfing);
+  cursor: pointer;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* Hover effect */
+.icon-grid svg:hover {
+  transform: scale(1.1);
+  fill: var(--windsurfing);  
+}
+/* SVG social icon bar */
+ .icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+ }
+ ul svg {
+    width: 36px;
+    height: 36px;
+    display: flexbox;
+    margin: 0;
+    justify-content: center;
+}
+ .social {
+    fill: var(--windsurfing);
+ }
+ .social:hover{
+    fill: var(--windsurfing);
+ }
+ .objectinfo {
+   margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+ }
+ .hidden {
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.main-article, .ExperienceInfo, .Eduinfo, .skills\.info, .languageinfo, .refinfo, .certinfo {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.icon-grid svg {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+}
+
